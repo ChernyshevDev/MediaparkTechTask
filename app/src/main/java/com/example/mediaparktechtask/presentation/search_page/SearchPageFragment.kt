@@ -14,6 +14,7 @@ import com.example.mediaparktechtask.databinding.FragmentNewsBinding
 import com.example.mediaparktechtask.presentation.expanded_news.CONTENT
 import com.example.mediaparktechtask.presentation.expanded_news.IMAGE
 import com.example.mediaparktechtask.data.containers.SearchDataContainer
+import com.example.mediaparktechtask.data.containers.updateState
 import com.example.mediaparktechtask.presentation.ClickEventHelper
 import com.example.mediaparktechtask.presentation.expanded_news.TITLE
 import com.example.mediaparktechtask.presentation.adapters.MultiAdapter
@@ -71,10 +72,9 @@ class SearchPageFragment : Fragment() {
     }
 
     private fun clearInputText() {
-        SearchDataContainer.data.postValue(
-            SearchDataContainer.data.value!!.apply {
-                inputText = null
-            })
+        SearchDataContainer.updateState {
+            inputText = null
+        }
     }
 
     private fun setupViewModel() {
@@ -113,10 +113,9 @@ class SearchPageFragment : Fragment() {
     }
 
     private fun fetchNews(keyword: String) {
-        SearchDataContainer.data.postValue(
-            SearchDataContainer.data.value?.apply {
-                inputText = keyword
-            })
+        SearchDataContainer.updateState {
+            inputText = keyword
+        }
     }
 
     private fun setUpRecyclerView() {

@@ -14,6 +14,7 @@ import androidx.navigation.findNavController
 import com.example.mediaparktechtask.R
 import com.example.mediaparktechtask.data.containers.SearchDataContainer
 import com.example.mediaparktechtask.data.containers.SortOptions
+import com.example.mediaparktechtask.data.containers.updateState
 import com.example.mediaparktechtask.databinding.MainScreenBinding
 import com.example.mediaparktechtask.domain.entity.NavigationBarItem
 import com.example.mediaparktechtask.presentation.adapters.NavigationBarAdapter
@@ -133,11 +134,10 @@ class MainActivity : AppCompatActivity() {
                     hideKeyboard(this)
 
                     val inputText = this.text.toString()
-                    SearchDataContainer.data.postValue(
-                        SearchDataContainer.data.value.apply {
-                            this!!.inputText = inputText
-                            this.searchHistory.add(inputText)
-                        })
+                    SearchDataContainer.updateState {
+                        this.inputText = inputText
+                        this.searchHistory.add(inputText)
+                    }
                     return@setOnEditorActionListener true
                 } else {
                     Toast.makeText(
@@ -185,28 +185,25 @@ class MainActivity : AppCompatActivity() {
         with(viewBinding.mainScreenSortByBottomDialog) {
             sortByRelevance.root.setOnClickListener {
                 if (SearchDataContainer.data.value!!.sortBy != SortOptions.SortByRelevance) {
-                    SearchDataContainer.data.postValue(
-                        SearchDataContainer.data.value!!.apply {
-                            sortBy = SortOptions.SortByRelevance
-                            if (searchHistory.isNotEmpty()) {
-                                inputText = searchHistory.last()
-                            }
+                    SearchDataContainer.updateState {
+                        sortBy = SortOptions.SortByRelevance
+                        if (searchHistory.isNotEmpty()) {
+                            inputText = searchHistory.last()
                         }
-                    )
+                    }
                     setBottomDialogItemsIcons()
                 }
             }
 
             sortByUploadDate.root.setOnClickListener {
                 if (SearchDataContainer.data.value!!.sortBy != SortOptions.SortByUploadDate) {
-                    SearchDataContainer.data.postValue(
-                        SearchDataContainer.data.value!!.apply {
-                            sortBy = SortOptions.SortByUploadDate
-                            if (searchHistory.isNotEmpty()) {
-                                inputText = searchHistory.last()
-                            }
+                    SearchDataContainer.updateState {
+                        sortBy = SortOptions.SortByUploadDate
+                        if (searchHistory.isNotEmpty()) {
+                            inputText = searchHistory.last()
                         }
-                    )
+                    }
+
                     setBottomDialogItemsIcons()
                 }
             }

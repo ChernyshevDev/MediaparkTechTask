@@ -10,11 +10,8 @@ import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.mediaparktechtask.R
+import com.example.mediaparktechtask.data.containers.*
 import com.example.mediaparktechtask.databinding.FragmentFilterBinding
-import com.example.mediaparktechtask.data.containers.Date
-import com.example.mediaparktechtask.data.containers.SearchDataContainer
-import com.example.mediaparktechtask.data.containers.SearchOptions
-import com.example.mediaparktechtask.data.containers.calculateFilters
 import com.example.mediaparktechtask.presentation.ClickEventHelper
 import com.example.mediaparktechtask.presentation.ViewEventHelper
 
@@ -112,14 +109,11 @@ class FilterFragment : Fragment() {
 
     private fun setClearButtonClick() {
         ClickEventHelper.onClearButtonClick = {
-            SearchDataContainer.data.postValue(
-                SearchDataContainer.data.value!!.apply {
-                    this.filter.dateFrom = null
-                    this.filter.dateTo = null
-                    filtersApplied = calculateFilters(this)
-                }
-            )
-
+            SearchDataContainer.updateState {
+                this.filter.dateFrom = null
+                this.filter.dateTo = null
+                filtersApplied = calculateFilters(this)
+            }
             dateFrom = null
             dateTo = null
             setupViews()
@@ -128,13 +122,11 @@ class FilterFragment : Fragment() {
 
     private fun setApplyFilterButtonClick() {
         binding.applyFilterButton.setOnClickListener {
-            SearchDataContainer.data.postValue(
-                SearchDataContainer.data.value!!.apply {
-                    this.filter.dateFrom = dateFrom
-                    this.filter.dateTo = dateTo
-                    filtersApplied = calculateFilters(this)
-                }
-            )
+            SearchDataContainer.updateState {
+                this.filter.dateFrom = dateFrom
+                this.filter.dateTo = dateTo
+                filtersApplied = calculateFilters(this)
+            }
             goToSearchPage()
         }
     }

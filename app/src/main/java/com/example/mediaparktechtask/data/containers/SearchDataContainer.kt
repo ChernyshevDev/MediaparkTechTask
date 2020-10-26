@@ -59,3 +59,13 @@ fun calculateFilters(searchBarData: SearchBarData): Int {
     }
     return filters
 }
+
+fun SearchDataContainer.updateState(
+    updates: SearchBarData.() -> Unit
+): Unit {
+    this.data.postValue(
+        this.data.value!!.apply {
+            updates()
+        }
+    )
+}

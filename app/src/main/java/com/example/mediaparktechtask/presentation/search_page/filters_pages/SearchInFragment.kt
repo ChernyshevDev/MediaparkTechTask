@@ -16,6 +16,7 @@ import com.example.mediaparktechtask.presentation.adapters.SearchInAdapter
 import com.example.mediaparktechtask.domain.entity.SearchInItem
 import com.example.mediaparktechtask.presentation.ClickEventHelper
 import com.example.mediaparktechtask.data.containers.calculateFilters
+import com.example.mediaparktechtask.data.containers.updateState
 import dagger.android.support.AndroidSupportInjection
 import javax.inject.Inject
 
@@ -88,12 +89,10 @@ class SearchInFragment : Fragment() {
     private fun setOnApplyFilterButtonClick() {
         binding.applyFilterButton.setOnClickListener {
             if (searchIn.atLeastOneSelected()) {
-                SearchDataContainer.data.postValue(
-                    SearchDataContainer.data.value?.apply {
-                        filter.searchIn = searchIn
-                        filtersApplied = calculateFilters(this)
-                    }
-                )
+                SearchDataContainer.updateState {
+                    filter.searchIn = searchIn
+                    filtersApplied = calculateFilters(this)
+                }
                 findNavController().popBackStack()
             } else {
                 Toast.makeText(context, getString(R.string.nothing_is_selected), Toast.LENGTH_SHORT)
@@ -123,14 +122,12 @@ class SearchInFragment : Fragment() {
 
             adapter.deselectAllButSearchInTitle()
 
-            SearchDataContainer.data.postValue(
-                SearchDataContainer.data.value?.apply {
-                    filter.searchIn = arrayListOf(
-                        SearchOptions.SearchInTitle
-                    )
-                    filtersApplied = calculateFilters(this)
-                }
-            )
+            SearchDataContainer.updateState {
+                filter.searchIn = arrayListOf(
+                    SearchOptions.SearchInTitle
+                )
+                filtersApplied = calculateFilters(this)
+            }
         }
     }
 }
