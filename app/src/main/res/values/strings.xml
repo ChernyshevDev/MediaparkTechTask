@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">MediaparkTechTask</string>
+
+    <!-- NAVIGATION ITEMS -->
+    <string name="navigation_header_home">Home</string>
+    <string name="navigation_header_news">News</string>
+    <string name="navigation_header_search">Search</string>
+    <string name="navigation_header_profile">Profile</string>
+    <string name="navigation_header_more">More</string>
+
+    <!-- COMMON -->
+    <string name="read_more">Read More</string>
+    <string name="search">Search</string>
+    <string name="filter">Filter</string>
+    <string name="date">Date</string>
+    <string name="from">From</string>
+    <string name="to">To</string>
+    <string name="search_in">Search in</string>
+    <string name="sort_by">Sort by</string>
+    <string name="upload_date">Upload date</string>
+    <string name="relevance">Relevance</string>
+    <string name="all">All</string>
+    <string name="apply">Apply</string>
+    <string name="apply_filter">Apply filter</string>
+    <string name="clear">Clear</string>
+    <string name="search_history">Search History</string>
+    <string name="nothing_here">Nothing here yet!</string>
+    <string name="date_hint">yyyy/mm/dd</string>
+    <string name="title">Title</string>
+    <string name="description">Description</string>
+    <string name="content">Content</string>
+    <string name="count_of_news">%1$d news</string>
+
+    <!-- TOASTER MESSAGES -->
+    <string name="nothing_is_selected">You should select at least something!</string>
+    <string name="invalid_input">I cannot search for this!</string>
+    <string name="enable_internet">No internet connection\nPlease, enable internet!</string>
+
+    <!-- LOREM IPSUM -->
+    <string name="dummy_title">Isum cillum excepteur</string>
+    <string name="dummy_description">Isum cillum excepteur esse aliqua RT5117785</string>
+    <string name="dummy_content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In bibendum eget ex sit amet pretium. Etiam a nulla maximus, consectetur sapien ac, hendrerit lacus. Mauris efficitur euismod bibendum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla vestibulum at tortor eget scelerisque. Praesent vel euismod nunc, sed condimentum massa. Ut nunc metus, rutrum at ultrices et, varius at metus. Fusce finibus eu nisi eu molestie. Integer egestas ullamcorper justo sed convallis. Mauris porttitor nisl in purus malesuada, ut luctus nunc efficitur. Duis auctor massa eu diam lobortis consectetur. Mauris pretium cursus vestibulum. Maecenas ultrices mi nunc, sed egestas odio suscipit sollicitudin. Vestibulum bibendum at tortor nec condimentum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</string>
+
+</resources>

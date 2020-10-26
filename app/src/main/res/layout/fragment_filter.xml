@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/filter_page_title"
+        style="@style/small_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/unit_4"
+        android:layout_marginTop="@dimen/unit_8"
+        android:text="@string/filter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/filter_page_date_title"
+        style="@style/bottom_sheet_item_title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/unit_4"
+        android:layout_marginTop="@dimen/unit_5"
+        android:text="@string/date"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/filter_page_title" />
+
+    <TextView
+        android:id="@+id/filter_page_date_from_title"
+        style="@style/small_orange_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/unit_4"
+        android:layout_marginTop="@dimen/unit_5"
+        android:text="@string/from"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/filter_page_date_title" />
+
+    <TextView
+        android:id="@+id/filter_page_date_from"
+        style="@style/hint_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/unit_4"
+        android:layout_marginTop="@dimen/unit"
+        android:layout_marginEnd="@dimen/unit_4"
+        android:paddingTop="@dimen/unit_2"
+        android:paddingBottom="@dimen/unit_2"
+        android:text="@string/date_hint"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/filter_page_date_from_title" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_calendar"
+        app:layout_constraintBottom_toBottomOf="@id/filter_page_date_from"
+        app:layout_constraintEnd_toEndOf="@id/filter_page_date_from"
+        app:layout_constraintTop_toTopOf="@id/filter_page_date_from" />
+
+    <View
+        android:id="@+id/separation_line_1"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:layout_marginStart="@dimen/unit_4"
+        android:layout_marginTop="@dimen/unit_2"
+        android:layout_marginEnd="@dimen/unit_4"
+        android:background="@color/colorSacoBlue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/filter_page_date_from" />
+
+    <TextView
+        android:id="@+id/filter_page_date_to_title"
+        style="@style/small_orange_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/unit_4"
+        android:layout_marginTop="@dimen/unit_5"
+        android:text="@string/to"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/filter_page_date_from" />
+
+    <View
+        android:id="@+id/separation_line_2"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:layout_marginStart="@dimen/unit_4"
+        android:layout_marginTop="@dimen/unit_2"
+        android:layout_marginEnd="@dimen/unit_4"
+        android:background="@color/colorSacoBlue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/filter_page_date_to" />
+
+    <TextView
+        android:id="@+id/filter_page_date_to"
+        style="@style/hint_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/unit_4"
+        android:layout_marginTop="@dimen/unit"
+        android:layout_marginEnd="@dimen/unit_4"
+        android:paddingTop="@dimen/unit_2"
+        android:paddingBottom="@dimen/unit_2"
+        android:text="@string/date_hint"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/filter_page_date_to_title" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_calendar"
+        app:layout_constraintBottom_toBottomOf="@id/filter_page_date_to"
+        app:layout_constraintEnd_toEndOf="@id/filter_page_date_to"
+        app:layout_constraintTop_toTopOf="@id/filter_page_date_to" />
+
+    <TextView
+        android:id="@+id/filter_page_search_in_button"
+        style="@style/bottom_sheet_item_title_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/unit_4"
+        android:layout_marginTop="@dimen/unit_4"
+        android:layout_marginEnd="@dimen/unit_4"
+        android:paddingTop="@dimen/unit_4"
+        android:paddingBottom="@dimen/unit_4"
+        android:text="@string/search_in"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/filter_page_date_to" />
+
+    <TextView
+        android:id="@+id/filter_page_search_in_current_preferences"
+        style="@style/hint_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/all"
+        app:layout_constraintBottom_toBottomOf="@id/filter_page_search_in_button"
+        app:layout_constraintEnd_toEndOf="@id/filter_page_search_in_button"
+        app:layout_constraintTop_toTopOf="@id/filter_page_search_in_button" />
+
+    <Button
+        android:id="@+id/apply_filter_button"
+        style="@style/common_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/unit_4"
+        android:layout_marginEnd="@dimen/unit_4"
+        android:layout_marginBottom="@dimen/unit_5"
+        android:background="@drawable/rounded_button_with_ripple"
+        android:text="@string/apply_filter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

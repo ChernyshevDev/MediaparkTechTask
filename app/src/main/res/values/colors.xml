@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorAccent">#03DAC5</color>
+
+    <color name="colorSacoDarkGray">#939DAE</color>
+    <color name="colorLightGray">#F7F7F7</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorSacoBlack">#1E1F21</color>
+    <color name="colorSacoBlue">#F68F54</color>
+    <color name="colorSacoBorder">#F2F2F2</color>
+
+    <color name="colorNavigationItemSelected">@color/colorSacoBlue</color>
+    <color name="colorNavigationItemUnselected">#939DAE</color>
+</resources>

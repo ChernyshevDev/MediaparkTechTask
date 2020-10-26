@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/unit_2"
+        android:layout_marginEnd="@dimen/unit_2"
+        android:background="@android:color/transparent"
+        app:cardBackgroundColor="@color/colorWhite"
+        app:cardCornerRadius="@dimen/unit_8"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/expanded_news_image"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/unit_4"
+                android:layout_marginTop="@dimen/unit_4"
+                android:layout_marginEnd="@dimen/unit_4"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/dummy_news_img"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_percent="0.33"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0" />
+
+            <TextView
+                android:id="@+id/expanded_news_title"
+                style="@style/news_title_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/unit_4"
+                android:layout_marginTop="@dimen/unit_2"
+                android:layout_marginEnd="@dimen/unit_4"
+                android:text="@string/dummy_title"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/expanded_news_image" />
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/unit_2"
+                android:layout_marginBottom="@dimen/unit_8"
+                app:layout_constraintBottom_toTopOf="@id/expanded_news_read_more_button"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/expanded_news_title"
+                app:layout_constraintVertical_bias="0">
+
+                <TextView
+                    android:id="@+id/expanded_news_content"
+                    style="@style/news_content_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/unit_4"
+                    android:layout_marginEnd="@dimen/unit_4"
+                    android:text="@string/dummy_content" />
+            </androidx.core.widget.NestedScrollView>
+
+            <TextView
+                android:id="@+id/expanded_news_read_more_button"
+                style="@style/common_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/unit_4"
+                android:layout_marginEnd="@dimen/unit_4"
+                android:layout_marginBottom="@dimen/unit_4"
+                android:background="@drawable/rounded_button_with_ripple"
+                android:text="@string/read_more"
+                android:textAlignment="center"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,27 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorWhite</item>
+        <item name="colorPrimaryDark">@color/colorWhite</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+    <!-- Usually, using paddings/margins in styles is bad practice, -->
+    <!-- Because it may affect other elements of view. -->
+    <!-- However, in this particular case, I use paddings to create the shape of button. -->
+    <!-- So it should be okay -->
+    <style name="common_button">
+        <item name="fontFamily">@font/open_sans_bold</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:paddingTop">16sp</item>
+        <item name="android:paddingBottom">16sp</item>
+    </style>
+
+    <style name="MyDialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/fade_in</item>
+    </style>
+</resources>

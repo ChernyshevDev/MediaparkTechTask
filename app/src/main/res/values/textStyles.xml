@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="navigation_item_text">
+        <item name="fontFamily">sans-serif</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:lineSpacingExtra">4sp</item>
+        <item name="android:textColor">@color/colorSacoDarkGray</item>
+    </style>
+
+    <style name="small_white_text" parent="navigation_item_text">
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="small_heading">
+        <item name="android:textSize">16sp</item>
+        <item name="android:lineSpacingExtra">6sp</item>
+        <item name="android:textColor">@color/colorSacoBlack</item>
+        <item name="fontFamily">@font/open_sans_bold</item>
+    </style>
+
+    <style name="news_title_text">
+        <item name="android:textSize">15sp</item>
+        <item name="fontFamily">@font/open_sans_semibold</item>
+        <item name="android:textColor">@color/colorSacoBlack</item>
+        <item name="android:lineSpacingExtra">5sp</item>
+    </style>
+
+    <style name="bottom_sheet_item_title_text">
+        <item name="android:textSize">14sp</item>
+        <item name="fontFamily">@font/open_sans_semibold</item>
+        <item name="android:textColor">@color/colorSacoBlack</item>
+    </style>
+
+    <style name="news_content_text">
+        <item name="android:textSize">12sp</item>
+        <item name="fontFamily">@font/open_sans</item>
+        <item name="android:textColor">@color/colorSacoBlack</item>
+    </style>
+
+    <style name="small_orange_text">
+        <item name="android:textColor">@color/colorSacoBlue</item>
+        <item name="android:textSize">10sp</item>
+        <item name="fontFamily">@font/open_sans</item>
+    </style>
+
+    <style name="medium_orange_text" parent="small_orange_text">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="hint_text">
+        <item name="fontFamily">@font/open_sans</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:lineSpacingExtra">6sp</item>
+        <item name="android:textColor">@color/colorSacoDarkGray</item>
+    </style>
+</resources>
